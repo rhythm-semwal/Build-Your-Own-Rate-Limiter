@@ -6,7 +6,7 @@ from RateLimitingAlgorithms import RateLimitExceeded
 app = FastAPI()
 
 ip_address_to_algorithm_mapping = {}
-PERMITTED_ALGORITHM = ['TokenBucket']
+PERMITTED_ALGORITHM = ['TokenBucket', 'FixedCounterWindow', 'SlidingWindow', 'SlidingWindowCounter']
 
 
 @app.get("/limited")
